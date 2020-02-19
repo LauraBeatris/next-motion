@@ -1,8 +1,9 @@
 import fetch from "isomorphic-unfetch";
+import { motion } from 'framer-motion'
 import Link from "next/link";
 
 const Product = props => (
-  <div>
+  <motion.div exit={{opacity: 0}}>
     <div className='fullscreen'>
       <div className='product'>
         <div className='img'>
@@ -12,7 +13,7 @@ const Product = props => (
           <div className='inner'>
             <Link href='/'>
               <div>
-                <a className='go-back'>Back to products</a>
+                <a className='go-back' style={{color: '#000', marginTop: '100px'}}>Back to products</a>
               </div>
             </Link>
             <div>
@@ -40,7 +41,7 @@ const Product = props => (
         </div>
       </div>
     </div>
-  </div>
+  </motion.div>
 );
 
 Product.getInitialProps = async function(context) {

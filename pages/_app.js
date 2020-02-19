@@ -8,6 +8,14 @@ class MyApp extends App {
     const { Component, pageProps, router } = this.props;
 
     return (
+    
+      /* 
+        AnimatePresence - Animation ==> Motion Components <== as there're
+        unmounted from the React Tree
+
+        It enables the exit prop which can define an animate to use when 
+        the component unmount
+      */
       <AnimatePresence exitBeforeEnter>
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>
