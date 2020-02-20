@@ -2,43 +2,20 @@ import Link from "next/link";
 import { motion } from 'framer-motion'
 import fetch from "isomorphic-unfetch";
 
+import fadeInUp from '../animations/fadeInUp'
+import stagger from '../animations/stagger'
+
 /* 
   === 3 Important Props ===
-  animate => defines animation. example => x: 0
-  initial => defines the initial state of a animation or starting point. example => x: 60
-  exit => defines animation when component exists/unmount
+  animate => Defines animation. example => x: 0
+  initial => Defines the initial state of a animation or starting point. example => x: 60
+  exit => Defines animation when component exists/unmount
 */
 
 /* 
   Variants => Allow us to write our animations in variables
   and also define unique names to them
 */
-
-const easing = [0.6, -0.05, 0.01, 0.99]
-
-const fadeInUp = {
-  initial: { 
-    opacity: 0,
-    y: 60
-  },
-  animate: { 
-    y: 0, 
-    opacity: 1,
-    transition: { 
-      duration: .6, 
-      ease: easing 
-    }
-  }
-}
-
-// staggerChildren => Orchestrate when children animations play relative to their parent.
-const stagger = { 
-  animate: { 
-    transition: { 
-      staggerChildren: 0.1
-    }
-  }
-}
 
 const Index = props => (
   /* Fadein effect */
@@ -47,7 +24,7 @@ const Index = props => (
       <div className='title'>
         <h1>Select a protein</h1>
       </div>
-      <motion.div variants={stagger} className='product-row'>
+      <motion.div variants={stagger(0.3)} className='product-row'>
         {props.products.map(product => (
           <Link
             key={product.id}
