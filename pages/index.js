@@ -14,6 +14,8 @@ import fetch from "isomorphic-unfetch";
   and also define unique names to them
 */
 
+const easing = [0.6, -0.05, 0.01, 0.99]
+
 const fadeInUp = {
   initial: { 
     opacity: 0,
@@ -22,6 +24,19 @@ const fadeInUp = {
   animate: { 
     y: 0, 
     opacity: 1,
+    transition: { 
+      duration: .6, 
+      ease: easing 
+    }
+  }
+}
+
+// staggerChildren => Orchestrate when children animations play relative to their parent.
+const stagger = { 
+  animate: { 
+    transition: { 
+      staggerChildren: 0.1
+    }
   }
 }
 
@@ -32,7 +47,7 @@ const Index = props => (
       <div className='title'>
         <h1>Select a protein</h1>
       </div>
-      <div className='product-row'>
+      <motion.div variants={stagger} className='product-row'>
         {props.products.map(product => (
           <Link
             key={product.id}
@@ -40,7 +55,7 @@ const Index = props => (
             as={`/products/${product.id}`}>
             <motion.div variants={fadeInUp} className='card'>
               <span className='category'>Protein</span>
-              <img key={product.image} src={product.image} width={250} />
+              <motion.img initial={{x: 60, opacity: 0}} animate={{x: 0, opacity: 1}} transition={{delay: 0.2}} key={product.image} src={product.image} width={250} />
               <div className='product-info'>
                 <h4>{product.name}</h4>
                 <span>{product.price}</span>
@@ -48,7 +63,7 @@ const Index = props => (
             </motion.div>
           </Link>
         ))}
-      </div>
+      </motion.div>
     </div>
   </motion.div>
 );
