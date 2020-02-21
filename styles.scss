@@ -28,13 +28,21 @@ body {
     }
   }
 
+  .starbucks-logo { 
+    height: 50px;
+  }
+
   .title {
     position: relative;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
     width: 350px;
 
     h1 {
       font-size: 2rem;
       margin: 8px 0;
+      text-align: center;
     }
 
     padding-left: 40px;
@@ -91,7 +99,7 @@ body {
       }
       .product-info {
         position: absolute;
-        width: 375px;
+        padding: 0 2rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -99,6 +107,11 @@ body {
         right: 0;
         margin: 0 auto;
         bottom: 24px;
+
+        @media all and (max-width: 1200px) { 
+          flex-direction: column;
+          align-items: flex-start;
+        }
 
         h4 {
           color: #282828;

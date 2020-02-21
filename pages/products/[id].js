@@ -29,13 +29,10 @@ const Product = props => (
         >
           <div className='inner'>
             <Link href='/'>
-              <motion.div variants={fadeInUp}>
-                <a className='go-back' style={{color: '#000', marginTop: '100px'}}>Back to products</a>
+              <motion.div whileHover={{x: 5}} whiteTap={{x: 0}}variants={fadeInUp}>
+                <a className='go-back' style={{color: '#f1f3f5;', marginTop: '100px'}}>Back to products</a>
               </motion.div>
             </Link>
-            <motion.div variants={fadeInUp}>
-              <span className='category'>Protein</span>
-            </motion.div>
             <motion.h1 variants={fadeInUp}>{props.product.name}</motion.h1>
             <motion.p variants={fadeInUp}>{props.product.details}</motion.p>
             <motion.div variants={fadeInUp} className='additonals'>
