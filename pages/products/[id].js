@@ -48,8 +48,8 @@ const Product = props => (
               <span className='price'>{props.product.price}</span>
             </motion.div>
             <motion.div variants={fadeInUp} className='btn-row'>
-              <button className='add-to-cart'> Add to cart</button>
-              <button className='subscribe'> Subscribe</button>
+              <motion.button whileHover={{y: -5}} whileTap={{y: 0}} className='add-to-cart'> Add to cart</motion.button>
+              <motion.button whileHover={{y: -5}} whileTap={{y: 0}} className='subscribe'> Subscribe</motion.button>
             </motion.div>
           </div>
         </motion.div>

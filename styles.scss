@@ -14,6 +14,7 @@ body {
   max-width: 1540px;
   margin: 0 auto;
   overflow: scroll;
+  padding: 2rem 0;
 
   &.center {
     height: 100vh;
@@ -128,11 +129,19 @@ body {
 
 .fullscreen {
   height: 100vh;
+  overflow: scroll;
+
   .product {
     height: 100vh;
     display: flex;
+    flex-direction: row; 
     align-items: center;
     justify-content: space-between;
+
+    @media all and (max-width: 1200px) { 
+      flex-direction: column;
+    }
+
     .img {
       width: 50%;
       height: 100%;
@@ -141,11 +150,16 @@ body {
       align-items: center;
       justify-content: center;
 
+      @media all and (max-width: 1200px) { 
+        width: 100%;
+      }
+
       img {
         cursor: move;
         width: 500px;
       }
     }
+
     .product-details {
       width: 50%;
       height: 100%;
@@ -153,9 +167,28 @@ body {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
+      @media all and (max-width: 1200px) { 
+        width: 100%;
+      }
+      
       .inner {
         width: 480px;
         position: relative;
+
+        @media all and (max-width: 1200px) { 
+          width: 100%;
+          h1, p, .additonals { 
+            padding: 0 1rem;
+          }
+        }
+
+     
+
+        @media all and (max-width: 1200px) { 
+          width: 100%;
+        }
+
         .go-back {
           cursor: pointer;
           color: #282828;
@@ -188,6 +221,11 @@ body {
           display: flex;
           align-items: center;
           justify-content: space-between;
+
+         @media all and (max-width: 1200px) { 
+           padding: 0 1rem;
+         }
+
           .qty {
             display: flex;
             align-items: center;
@@ -222,9 +260,17 @@ body {
         .btn-row {
           margin-top: 72px;
           display: flex;
+          flex-direction: row;
           align-items: center;
+
+          @media all and (max-width: 1200px) { 
+            flex-direction: column;
+            margin-top: 20px;
+          }
+
           button {
             cursor: pointer;
+            outline: none;
             border: none;
             border-radius: 8px;
             height: 48px;
@@ -233,16 +279,39 @@ body {
             text-transform: uppercase;
             font-weight: 500;
             letter-spacing: 0.06rem;
+            box-shadow: 2px 2px .7rem .2rem rgba(0, 0, 0, 0.2);
+
+
             &.add-to-cart {
               background: #238457;
               color: #fff;
               margin-right: 24px;
+
+              &:hover { 
+                background: #1b6945;
+              }
+
+              @media all and (max-width: 1200px) { 
+                margin: 1rem 0 0;
+              }
             }
+            
             &.subscribe {
               background: transparent;
               color: #424550;
               border: 2px solid #424550;
+
+              &:hover { 
+                background: #eee
+              }
+
+              @media all and (max-width: 1200px) { 
+                margin: 1rem 0 2rem;
+              }
             }
+
+           
+  
           }
         }
       }

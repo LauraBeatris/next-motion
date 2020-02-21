@@ -22,7 +22,7 @@ const Index = props => (
   <motion.div exit={{opacity: 0}} initial="initial" animate="animate">
     <div className='container center'>
       <div className='title'>
-      <img className="starbucks-logo" src="https://upload.wikimedia.org/wikipedia/pt/0/0f/Starbucks_Corporation_Logo_2011.svg.png" alt="Starbucks" aria-label="Starbucks" />
+      <img className="starbucks-logo" src="https://upload.wikimedia.org/wikipedia/pt/0/0f/Starbucks_Corporation_Logo_2011.svg.png" alt="Starbucks" aria-label="Starbucks" title="Starbucks"/>
         <h1>Select a drink</h1>
       </div>
       <motion.div variants={stagger(0.3)} className='product-row'>
