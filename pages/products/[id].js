@@ -23,7 +23,10 @@ const Product = props => (
             src={props.product.image}
           />
         </motion.div>
-        <motion.div variants={stagger(0.08)} className='product-details'>
+        <motion.div 
+          variants={stagger(0.08)} 
+          className='product-details'
+        >
           <div className='inner'>
             <Link href='/'>
               <motion.div variants={fadeInUp}>
