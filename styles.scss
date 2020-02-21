@@ -10,28 +10,53 @@ body {
 }
 
 .container {
-  width: 1540px;
+  width: 100vw;
+  max-width: 1540px;
   margin: 0 auto;
+  overflow: scroll;
+
   &.center {
     height: 100vh;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    flex-direction: row;
+
+    @media all and (max-width: 1200px) { 
+      flex-direction: column;
+    }
   }
+
   .title {
     position: relative;
     width: 350px;
+
     h1 {
       font-size: 2rem;
       margin: 8px 0;
+    }
+
+    padding-left: 40px;
+
+    @media all and (max-width: 1200px) { 
+      padding-left: 0;
+      text-align: center;
     }
   }
   .product-row {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-direction: row;
     width: 100%;
-    padding: 0 80px;
+    padding: 0 40px 0 80px;
+
+    @media all and (max-width: 1200px) { 
+      flex-direction: column;
+      padding: 0
+    }
+
     .card {
       box-sizing: border-box;
       position: relative;
@@ -41,7 +66,13 @@ body {
       background: #ffffff;
       width: 425px;
       height: 425px;
-      margin: 24px;
+      margin: 24px 0px 0px 24px;
+
+      @media all and (max-width: 1200px) { 
+        width: initial;
+        margin: 24px 0px 0px 0px;
+      }
+
       .category {
         font-size: 0.875rem;
         color: #424550;
@@ -51,9 +82,12 @@ body {
         margin-bottom: 32px;
         display: block;
       }
+
       img {
         display: flex;
         margin: 0 auto;
+        height: 250px;
+        width: 250px;
       }
       .product-info {
         position: absolute;
@@ -65,10 +99,12 @@ body {
         right: 0;
         margin: 0 auto;
         bottom: 24px;
+
         h4 {
           color: #282828;
           font-size: 1.1rem;
         }
+
         span {
           display: block;
         }
@@ -185,13 +221,14 @@ body {
             font-weight: 500;
             letter-spacing: 0.06rem;
             &.add-to-cart {
-              background: #2d89fa;
+              background: #238457;
               color: #fff;
               margin-right: 24px;
             }
             &.subscribe {
               background: transparent;
               color: #424550;
+              border: 2px solid #424550;
             }
           }
         }

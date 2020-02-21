@@ -22,7 +22,7 @@ const Index = props => (
   <motion.div exit={{opacity: 0}} initial="initial" animate="animate">
     <div className='container center'>
       <div className='title'>
-        <h1>Select a protein</h1>
+        <h1>Select a drink</h1>
       </div>
       <motion.div variants={stagger(0.3)} className='product-row'>
         {props.products.map(product => (
@@ -53,7 +53,7 @@ const Index = props => (
 
 Index.getInitialProps = async function() {
   const res = await fetch(
-    "http://my-json-server.typicode.com/wrongakram/demo/products"
+    "https://my-json-server.typicode.com/LauraBeatris/starbucks-server/drinks"
   );
   const data = await res.json();
   return {
