@@ -30,7 +30,7 @@ const Product = props => (
           <div className='inner'>
             <Link href='/'>
               <motion.div whileHover={{x: 5}} whiteTap={{x: 0}}variants={fadeInUp}>
-                <a className='go-back' style={{color: '#f1f3f5;', marginTop: '100px'}}>Back to products</a>
+                <a className='go-back' style={{color: '#f1f3f5;', marginTop: '100px'}}>&lt; Back to products</a>
               </motion.div>
             </Link>
             <motion.h1 variants={fadeInUp}>{props.product.name}</motion.h1>

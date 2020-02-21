@@ -68,6 +68,7 @@ body {
 
     .card {
       box-sizing: border-box;
+      box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, .1);
       position: relative;
       border-radius: 12px;
       padding: 24px;
@@ -157,6 +158,10 @@ body {
       img {
         cursor: move;
         width: 500px;
+
+        @media all and (max-width: 1200px) { 
+          width: 100%;
+        }
       }
     }
 
@@ -181,6 +186,10 @@ body {
           h1, p, .additonals { 
             padding: 0 1rem;
           }
+
+          h1 { 
+            margin-top: 2rem;
+          }
         }
 
      
@@ -197,6 +206,12 @@ body {
           position: absolute;
           top: -124px;
           left: 0;
+
+          @media all and (max-width: 1200px) { 
+            left: 4%;
+            top: -97px;
+    
+          }
         }
         .category {
           font-size: 1rem;
