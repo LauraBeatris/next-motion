@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="Next Motion" title="Next Motion" src=".https://upload.wikimedia.org/wikipedia/pt/0/0f/Starbucks_Corporation_Logo_2011.svg.png" width="150px" style="border-radius:100px"/>
+  <img alt="Next Motion" title="Next Motion" src="https://upload.wikimedia.org/wikipedia/pt/0/0f/Starbucks_Corporation_Logo_2011.svg.png" width="150px" style="border-radius:100px"/>
 </h1>
 
 <h3 align="center">
@@ -27,10 +27,9 @@
 
 <br>
 <p align="center">
-  <img align="center" src="https://i.ibb.co/wccRhm9/product-screen.png" alt="Product List" border="0">
-</p>
+  <img align="center" src="https://i.ibb.co/DYTxZ2Q/drinks-list.png" alt="drinks-list" border="0"></p>
 <p align="center">
-  <img align="center" src="https://i.ibb.co/wSjGYgs/Ac3m-LCZ-Imgur.png" alt="Product List" border="0">
+  <img align="center" src="https://i.ibb.co/zHz7H6c/product-view.png" alt="product-view" border="0">
 </p>
 <br>
 
@@ -52,7 +51,7 @@ Also, i choosed tailwind for styling the most part of the app because of the agi
 ```
 
 ## Deploy 
-[Zeit](https://zeit.co/) provides a easy way to deploy NextJS applications. First of all, you need to install the commands provided by the [Now CLI](https://zeit.co/download) 
+[Zeit](https://zeit.co/) provides a easy way to deploy NextJS applications. First of all, you need to install the commands provided by the [Now CLI](https://zeit.co/download) and then run the ``` now ``` command
   
 ---
 
