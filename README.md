@@ -22,7 +22,8 @@
 <p align="center">
   <a href="#rocket-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#runner-installation">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licence">Licence</a>
+  <a href="#hammer-deploy">Deploy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://nextjs-page-transitions.now.sh/" target="_blank" >Live Version</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 <br>
@@ -51,7 +52,7 @@ Also, i created a [custom api](https://github.com/LauraBeatris/starbucks-server)
   
 ```
 
-## Deploy 
+## :hammer: Deploy 
 [Zeit](https://zeit.co/) provides a easy way to deploy NextJS applications. First of all, you need to install the commands provided by the [Now CLI](https://zeit.co/download) and then run the ``` now ``` command
   
 ---
