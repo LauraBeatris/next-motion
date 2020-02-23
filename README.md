@@ -35,8 +35,9 @@
 
 
 ## :rocket: About the project
-  The goal of this project was to learn the fundamentals of NextJS and integrate with external services like the database feature provided by Firebase. The page transitions are made Framer Motion that provides a great api support to Server Side Rendering.
-Also, i choosed tailwind for styling the most part of the app because of the agility that utility classes are able provide.
+The goal of this project was to learn how to use the Framer Motion API with a Server Side Rendering Framework like NextJS. 
+Also, i created a [custom api](https://github.com/LauraBeatris/starbucks-server) to retrieve Starbucks Drinks data with [My Json Server](https://my-json-server.typicode.com/)
+
 ## :runner: Installation 
 
 ```   
@@ -54,5 +55,7 @@ Also, i choosed tailwind for styling the most part of the app because of the agi
 [Zeit](https://zeit.co/) provides a easy way to deploy NextJS applications. First of all, you need to install the commands provided by the [Now CLI](https://zeit.co/download) and then run the ``` now ``` command
   
 ---
+
+If you have some problem with the application, don't be afraid to contribute sending a issue/pull request, i'll be happy to help. 😃
 
 Made with ♥ by Laura :wave: [See my linkedin!](https://www.linkedin.com/in/laurabeatris/)
