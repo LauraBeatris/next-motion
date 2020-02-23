@@ -1,6 +1,7 @@
 import React from "react";
 import { AnimatePresence } from 'framer-motion'
 import App from "next/app";
+import Head from 'next/head'
 import "../styles.scss";
 
 class MyApp extends App {
@@ -16,9 +17,14 @@ class MyApp extends App {
         It enables the exit prop which can define an animate to use when 
         the component unmount
       */
-      <AnimatePresence exitBeforeEnter>
-        <Component {...pageProps} key={router.route} />
-      </AnimatePresence>
+     <>
+      <Head>
+          <title> Starbucks Drinks </title>
+      </Head>
+        <AnimatePresence exitBeforeEnter>
+          <Component {...pageProps} key={router.route} />
+        </AnimatePresence>
+      </>
     );
   }
 }

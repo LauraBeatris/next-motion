@@ -14,7 +14,10 @@ body {
   max-width: 1540px;
   margin: 0 auto;
   overflow: scroll;
-  padding: 2rem 0;
+
+  @media all and (max-width: 1200px) { 
+    padding: 2rem 0;
+  }
 
   &.center {
     height: 100vh;
