@@ -54,6 +54,7 @@ body {
     @media all and (max-width: 1200px) { 
       padding-left: 0;
       text-align: center;
+      margin-bottom: 80px;
     }
   }
   .product-row {
@@ -67,7 +68,7 @@ body {
 
     @media all and (max-width: 1200px) { 
       flex-direction: column;
-      padding: 0
+      padding: 0 0 150px 0;
     }
 
     .card {
@@ -88,7 +89,7 @@ body {
       @media all and (max-width: 1200px) { 
         width: initial;
         margin: 24px 0px 0px 0px;
-        min-height: 425; 
+        min-height: 425px; 
       }
 
       .category {

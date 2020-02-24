@@ -1,11 +1,16 @@
 import fetch from "isomorphic-unfetch";
 import { motion } from 'framer-motion'
 import Link from "next/link";
+import Head from 'next/head'
 
 import fadeInUp from '../../animations/fadeInUp'
 import stagger from '../../animations/stagger'
 
 const Product = props => (
+  <>
+  <Head>
+    <title> Starbucks Drinks | {props.product.name} </title>
+  </Head>
   <motion.div exit={{opacity: 0}} initial="initial" animate="animate">
     <div className='fullscreen'>
       <div className='product'>
@@ -56,6 +61,7 @@ const Product = props => (
       </div>
     </div>
   </motion.div>
+  </>
 );
 
 Product.getInitialProps = async function(context) {
