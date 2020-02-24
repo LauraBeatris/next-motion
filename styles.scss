@@ -80,6 +80,9 @@ body {
       width: 425px;
       height: 425px;
       margin: 24px 0px 0px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       @media all and (max-width: 1200px) { 
         width: initial;
